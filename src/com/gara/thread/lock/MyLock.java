@@ -1,4 +1,4 @@
-package com.gara.thread;
+package com.gara.thread.lock;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;

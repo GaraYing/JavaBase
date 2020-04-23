@@ -1,4 +1,4 @@
-package com.gara.thread;
+package com.gara.thread.lock;
 
 /**
  * @Author GARA

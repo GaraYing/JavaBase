@@ -1,11 +1,5 @@
 package com.gara.best.practice;
 
-import com.gara.best.practice.rule.Expression;
-import com.gara.best.practice.rule.Operator;
-import com.gara.best.practice.rule.RuleEngine;
-
-import javax.xml.transform.Result;
-
 /**
  * @description: IfElse
  * @author: Gara
@@ -27,10 +21,6 @@ public class IfElseDemoTest {
 
         int calculateUsingEnum = demoTest.calculateUsingEnum(4, 5, OperationEnum.ADD);
         System.out.println("calculateUsingEnum: " + calculateUsingEnum);
-
-        int correctResult = demoTest.whenNumbersGivenToRuleEngine_thenReturnCorrectResult();
-        System.out.println("correctResult"+ correctResult);
-
     }
 
     public int calculate(int a, int b, String operator) {
@@ -91,13 +81,5 @@ public class IfElseDemoTest {
      */
     public int calculateUsingEnum(int a, int b, OperationEnum operator) {
         return operator.calculate(a, b);
-    }
-
-
-    public int whenNumbersGivenToRuleEngine_thenReturnCorrectResult() {
-        Expression expression = new Expression(5, 5, Operator.ADD);
-        RuleEngine engine = new RuleEngine();
-        int result = engine.process(expression);
-        return result;
     }
 }
