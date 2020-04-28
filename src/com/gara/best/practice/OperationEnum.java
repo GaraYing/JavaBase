@@ -1,6 +1,6 @@
 package com.gara.best.practice;
 
-public enum  OperationEnum {
+public enum OperationEnum {
     ADD{
         @Override
         public int calculate(int a, int b) {
