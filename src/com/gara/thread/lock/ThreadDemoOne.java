@@ -28,7 +28,7 @@ public class ThreadDemoOne {
         for (int i = 0; i < threads.length; i++) {
             int finalI = i;
             Thread thread = new Thread(() -> {
-                System.out.println("线程" + finalI + "开始******");
+                System.out.println("Lock线程" + finalI + "开始******");
                 for (int j = 0; j < 10000; j++) {
                     lock.lock();
                     try {
@@ -37,7 +37,7 @@ public class ThreadDemoOne {
                         lock.unlock();
                     }
                 }
-                System.out.println("线程" + finalI + "结束********");
+                System.out.println("Lock线程" + finalI + "结束********");
             });
             threads[i] = thread;
             thread.start();
@@ -54,11 +54,11 @@ public class ThreadDemoOne {
         for (int i = 0; i < threads.length; i++) {
             int finalI = i;
             Thread thread = new Thread(() -> {
-                System.out.println("线程" + finalI + "开始******");
+                System.out.println("非Lock线程" + finalI + "开始******");
                 for (int j = 0; j < 10000; j++) {
                     demoOne.b++;
                 }
-                System.out.println("线程" + finalI + "结束********");
+                System.out.println("非Lock线程" + finalI + "结束********");
             });
             threads[i] = thread;
             thread.start();
