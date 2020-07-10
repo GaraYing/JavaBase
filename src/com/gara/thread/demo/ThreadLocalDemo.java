@@ -1,9 +1,7 @@
-package com.gara.thread;
-
-import com.sun.xml.internal.ws.server.ServerRtException;
+package com.gara.thread.demo;
 
 /**
- * @description: ThreadLocal学习
+ * @description: {@link ThreadLocal} ThreadLocal学习
  * @author: Gara
  * @createTime: 2020/4/27 17:10
  * @Version: 1.0
