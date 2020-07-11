@@ -1,6 +1,7 @@
 package com.gara.java8;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -23,6 +24,12 @@ public class StreamDemo {
         System.out.println();
         // sort
         list.stream().sorted().forEach(System.out::print);
+
+        System.out.println();
+
+        list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::print);
+
+//        list.stream().sorted(Comparator.naturalOrder()).forEach(System.out::print);
 
         System.out.println();
         //
