@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
- * @description:
+ * @description: {@link java.util.stream.Stream} learn
  * @author:  Gara
  * @createTime: 2020/1/16 16:28
  * @Version: 1.0
