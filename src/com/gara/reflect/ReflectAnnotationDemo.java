@@ -1,7 +1,5 @@
 package com.gara.reflect;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
@@ -13,9 +11,15 @@ import java.util.Arrays;
 public class ReflectAnnotationDemo {
 
     public static void main(String[] args) throws Exception {
-
+        Class<?> aClass = Class.forName(OrderController.class.getName());
+        Class<OrderController> controllerClass = OrderController.class;
         OrderController orderController = new OrderController();
         Class<? extends OrderController> clazz = orderController.getClass();
+        System.out.println("simpleName: " + clazz.getSimpleName());
+        System.out.println("name: " + clazz.getName());
+        System.out.println("canonicalName: " + clazz.getCanonicalName());
+        System.out.println("equals: " + clazz.getName().equalsIgnoreCase(controllerClass.getName()));
+        System.out.println("equals: " + clazz.getName().equalsIgnoreCase(aClass.getCanonicalName()));
         Arrays.asList(clazz.getDeclaredFields()).forEach(field -> {
             Autowired autowired = field.getAnnotation(Autowired.class);
             if (autowired != null){
@@ -25,9 +29,7 @@ public class ReflectAnnotationDemo {
 //                    fieldType.getConstructor(OrderService.class).newInstance();
                     Object object = fieldType.newInstance();
                     field.set(orderController, object); // implements inject (IOC)
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                } catch (InstantiationException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
             }

@@ -13,7 +13,6 @@ import java.util.Arrays;
 public class ReflectDemo {
 
     public static void main(String[] args) throws Exception {
-
         OrderController orderController = new OrderController();
         Class<? extends OrderController> clazz = orderController.getClass();
         // get all fields
@@ -21,11 +20,11 @@ public class ReflectDemo {
         Arrays.asList(fields).forEach(System.out::println); // public java.lang.String com.gara.reflect.OrderController.orderId
 
         Field orderServiceField = clazz.getDeclaredField("orderService");
-        orderServiceField.setAccessible(true);
+        //orderServiceField.setAccessible(true);
         String serviceFieldName = orderServiceField.getName();
         System.out.println("orderServiceField: " + serviceFieldName);
 
-        String name = serviceFieldName.substring(0,1).toUpperCase() + serviceFieldName.substring(1, serviceFieldName.length());
+        String name = serviceFieldName.substring(0,1).toUpperCase() + serviceFieldName.substring(1);
         String setName = "set" + name;
         Method method = clazz.getDeclaredMethod(setName, OrderService.class);
         OrderService orderService = new OrderService();
