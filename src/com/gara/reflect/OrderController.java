@@ -6,7 +6,7 @@ package com.gara.reflect;
  * @Date 2020/8/1 21:03
  * @Version V1.0.0
  **/
-public class OrderController {
+public class OrderController extends BaseController {
 
     @Autowired
     private OrderService orderService;

@@ -7,6 +7,8 @@ import java.util.Arrays;
 /**
  * @Author GARA
  * @Description 反射
+ *      1. getDeclaredXX不包括父类的方法，专注于获取本类的所有方法（包括public和非public）{@link Class#getDeclaredFields()} ()}
+ *      2. getXX包括派生链上所有父类和本类的所有public方法（只能是public） {@link Class#getFields()}
  * @Date 2020/8/1 21:02
  * @Version V1.0.0
  **/
@@ -34,5 +36,15 @@ public class ReflectDemo {
         Arrays.asList(declaredFields).forEach(System.out::println);
 
         System.out.println("orderService from reflect" + orderController.getOrderService());
+
+        Class<?> superclass = clazz.getSuperclass();
+        if (superclass != null){
+            Field ip = superclass.getDeclaredField("ip");
+            Field address = superclass.getField("address");
+            Object ipName = ip.getName();
+            Object addressName = address.getName();
+            System.out.println(ipName + "::" + addressName);
+        }
+
     }
 }
