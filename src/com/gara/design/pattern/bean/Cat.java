@@ -10,12 +10,25 @@ import com.gara.design.pattern.Comparable;
  **/
 public class Cat implements Comparable<Cat> {
 
-    private long weight;
+    public long weight;
 
-    private int height;
+    public int height;
+
+    public Cat(long weight, int height) {
+        this.weight = weight;
+        this.height = height;
+    }
 
     @Override
     public int compareTo(Cat cat) {
         return Integer.compare(this.height, cat.height);
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "weight=" + weight +
+                ", height=" + height +
+                '}';
     }
 }

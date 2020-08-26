@@ -10,7 +10,7 @@ import com.gara.design.pattern.Comparable;
  **/
 public class Dog implements Comparable<Dog> {
 
-    private long foot;
+    public long foot;
 
     public Dog(long foot) {
         this.foot = foot;
