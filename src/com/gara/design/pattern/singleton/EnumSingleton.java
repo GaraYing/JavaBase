@@ -1,6 +1,9 @@
 package com.gara.design.pattern.singleton;
 /**
  * @description: 单例模式-枚举 thread-safe
+ *
+ * 优点：1. 代码简单； 2. 反射安全；3. 序列化越反序列化安全.
+ *
  * @author:  GaraYing
  * @createTime: 2020/8/27 10:19
  * @Version: 1.0

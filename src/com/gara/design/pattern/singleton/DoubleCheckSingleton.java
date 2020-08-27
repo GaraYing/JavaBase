@@ -1,5 +1,7 @@
 package com.gara.design.pattern.singleton;
 
+import java.lang.reflect.Constructor;
+
 /**
  * @description: 双重检查锁机制 thread safe
  * @author: GaraYing
@@ -25,8 +27,17 @@ public class DoubleCheckSingleton {
         return INSTANCE;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("DoubleCheckSingleton: " + DoubleCheckSingleton.getInstance());
         System.out.println("DoubleCheckSingleton: " + DoubleCheckSingleton.getInstance());
+
+        Constructor<DoubleCheckSingleton> constructor = DoubleCheckSingleton.class.getDeclaredConstructor();
+
+        DoubleCheckSingleton newInstance = constructor.newInstance();
+        System.out.println("newInstance: " + newInstance);
+        System.out.println("DoubleCheckSingleton == newInstance: " + (newInstance == DoubleCheckSingleton.getInstance()));
+
+
+
     }
 }
