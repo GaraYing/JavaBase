@@ -18,10 +18,10 @@ public class Main {
 //        Dog[] a = {new Dog(1L), new Dog(3L), new Dog(2L)};
 
         Cat[] a = {new Cat(1L, 3), new Cat(3L, 2), new Cat(2L, 3)};
-        Sorter sorter = new Sorter();
+        Sorter<Cat> sorter = new Sorter<>();
 //        sorter.sort(a, new CatWeightStrategy());
         // lambda expression
-        sorter.sort(a, (Comparator<Cat>) (o1, o2) -> Long.compare(o1.weight, o2.weight));
+        sorter.sort(a, (o1, o2) -> Long.compare(o1.weight, o2.weight));
         System.out.println(Arrays.toString(a));
     }
 }

@@ -24,8 +24,8 @@ public class Main {
 //        System.out.println("newInstance:" + newInstance.hashCode());
         EnumSingleton singleton = Enum.valueOf(EnumSingleton.class, "SINGLETON");
         EnumSingleton singleton2 = Enum.valueOf(EnumSingleton.class, "SINGLETON");
-        System.out.println("enumInstance: " + singleton.hashCode());
-        System.out.println("enumInstance: " + singleton2.hashCode());
+        System.out.println("enumInstance: " + singleton.getResource());
+        System.out.println("enumInstance: " + singleton2.getResource());
         // 序列化/反序列化测试
         File test = new File("test");
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(test));
@@ -41,6 +41,10 @@ public class Main {
         System.out.println("enumInstance===" + mf4.hashCode());
         System.out.println("enumInstance===" + mf5.hashCode());
 
+        EnumSingleton.Resource resource = EnumSingleton.SINGLETON.getResource();
+        EnumSingleton.Resource resource2 = EnumSingleton.SINGLETON.getResource();
 
+        System.out.println("enumInstance.Resource : " + resource);
+        System.out.println("enumInstance.Resource : " + resource2);
     }
 }

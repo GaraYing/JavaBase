@@ -1,4 +1,5 @@
 package com.gara.design.pattern.singleton;
+
 /**
  * @description: 单例模式-枚举 thread-safe
  *
@@ -15,8 +16,20 @@ public enum EnumSingleton implements MySingleton{
             System.out.println("complete singleton");
         }
     };
+    private Resource instance;
+    EnumSingleton(){
+        instance = new Resource();
+    }
 
     public static EnumSingleton getInstance(){
         return SINGLETON;
+    }
+
+    public Resource getResource(){
+        return instance;
+    }
+
+    static class Resource{
+
     }
 }
