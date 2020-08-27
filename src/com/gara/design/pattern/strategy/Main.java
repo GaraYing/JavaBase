@@ -1,7 +1,6 @@
-package com.gara.design.pattern;
+package com.gara.design.pattern.strategy;
 
-import com.gara.design.pattern.bean.Cat;
-import com.gara.design.pattern.strategy.CatWeightStrategy;
+import com.gara.design.pattern.strategy.bean.Cat;
 
 import java.util.Arrays;
 

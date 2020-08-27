@@ -1,7 +1,6 @@
 package com.gara.design.pattern.strategy;
 
-import com.gara.design.pattern.Comparator;
-import com.gara.design.pattern.bean.Dog;
+import com.gara.design.pattern.strategy.bean.Dog;
 
 /**
  * @Author GARA

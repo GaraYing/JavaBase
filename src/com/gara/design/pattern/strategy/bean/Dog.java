@@ -1,6 +1,6 @@
-package com.gara.design.pattern.bean;
+package com.gara.design.pattern.strategy.bean;
 
-import com.gara.design.pattern.Comparable;
+import com.gara.design.pattern.strategy.Comparable;
 
 /**
  * @Author GARA

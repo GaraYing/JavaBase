@@ -1,4 +1,4 @@
-package com.gara.design.pattern;
+package com.gara.design.pattern.strategy;
 
 /**
  * @Author GARA
