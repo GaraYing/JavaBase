@@ -2,6 +2,7 @@ package com.gara.design.pattern.factorymethod;
 
 import com.gara.design.pattern.factorymethod.bean.Fruit;
 import com.gara.design.pattern.factorymethod.factory.AppleFactory;
+import com.gara.design.pattern.factorymethod.factory.FruitFactory;
 
 /**
  * @Author GARA
@@ -11,7 +12,8 @@ import com.gara.design.pattern.factorymethod.factory.AppleFactory;
  **/
 public class Main {
     public static void main(String[] args) {
-        Fruit apple = new AppleFactory().create();
+        FruitFactory fruitFactory = new AppleFactory();
+        Fruit apple = fruitFactory.create();
         apple.taste();
     }
 }
