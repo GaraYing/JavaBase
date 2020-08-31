@@ -5,6 +5,10 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/**
+ * {@link ReentrantReadWriteLock 读写锁}
+ *
+ */
 public class ReadWriteLockDemo {
 
     public static Map<String, Object> map = new HashMap<>();
