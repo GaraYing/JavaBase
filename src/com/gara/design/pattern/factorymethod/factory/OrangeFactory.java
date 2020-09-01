@@ -14,7 +14,7 @@ public class OrangeFactory implements FruitFactory{
     @Override
     public Fruit create() {
         // do sth
-        System.out.println("Apple created");
+        System.out.println("Orange created");
         return new Orange();
     }
 }

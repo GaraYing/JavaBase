@@ -1,8 +1,8 @@
 package com.gara.design.pattern.factorymethod;
 
-import com.gara.design.pattern.factorymethod.bean.Fruit;
-import com.gara.design.pattern.factorymethod.factory.AppleFactory;
 import com.gara.design.pattern.factorymethod.factory.FruitFactory;
+import com.gara.design.pattern.factorymethod.service.AppleService;
+import com.gara.design.pattern.factorymethod.service.OrangeService;
 
 /**
  * @Author GARA
@@ -12,8 +12,16 @@ import com.gara.design.pattern.factorymethod.factory.FruitFactory;
  **/
 public class Main {
     public static void main(String[] args) {
-        FruitFactory fruitFactory = new AppleFactory();
-        Fruit apple = fruitFactory.create();
-        apple.taste();
+//        FruitFactory fruitFactory = new AppleFactory();
+
+        FruitService fruitService = new AppleService();
+        fruitService.getFruit();
+
+//        FruitFactory fruitFactory = fruitService.getFruitFactory();
+//        Fruit apple = fruitFactory.create();
+//        apple.taste();
+
+        fruitService = new OrangeService();
+        fruitService.getFruit();
     }
 }
