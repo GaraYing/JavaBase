@@ -13,13 +13,15 @@ public class Main {
 
         URLFilter urlFilter = new URLFilter();
 
-        ChainFilter chainFilter = new DefaultChainFilter(htmlFilter);
-        chainFilter.add(urlFilter);
+        FilterChain filterChain = new FilterChain();
+        filterChain.add(htmlFilter).add(urlFilter);
 
-        Filter.ServletRequest request = new Filter.ServletRequest("请求测试测试12123");
+        Filter.ServletRequest request = new Filter.ServletRequest("hehe请求测试测试http://12123");
 
-        Filter.ServletResponse response = new Filter.ServletResponse("相应测试测试21231212");
+        Filter.ServletResponse response = new Filter.ServletResponse();
 
-        chainFilter.doFilter(request, response);
+        filterChain.doFilter(request, response, filterChain);
+
+        System.out.println(request.getStr());
     }
 }

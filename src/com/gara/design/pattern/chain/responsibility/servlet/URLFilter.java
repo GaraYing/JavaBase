@@ -8,22 +8,13 @@ package com.gara.design.pattern.chain.responsibility.servlet;
  **/
 public class URLFilter implements Filter {
 
-    private final ChainFilter chain;
-
-    public URLFilter() {
-        this.chain = null;
-    }
-
     @Override
-    public boolean doFilter(ServletRequest request, ServletResponse response, ChainFilter chainFilter) {
-        System.out.println("into URLFilter --------- ");
-        String requestStr = request.getStr();
-
-        boolean flag = true;
-        while (chainFilter != null && flag){
-            flag = chainFilter.doFilter(request, response);
-            chainFilter = chain;
+    public boolean doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) {
+        System.out.println("into URLFilter >>>>>>>>>");
+        if (request.getStr().contains("http")){
+            String replace = request.getStr().replace("http", "https");
+            request.setStr(replace);
         }
-        return true;
+        return false;
     }
 }

@@ -8,7 +8,7 @@ package com.gara.design.pattern.chain.responsibility.servlet;
  **/
 public interface Filter {
 
-    public boolean doFilter(ServletRequest request, ServletResponse response, ChainFilter chainFilter);
+    boolean doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain);
 
 //    ChainFilter getNext();
 
@@ -31,9 +31,6 @@ public interface Filter {
     class ServletResponse{
         String str;
 
-        public ServletResponse(String str) {
-            this.str = str;
-        }
 
         public String getStr() {
             return str;

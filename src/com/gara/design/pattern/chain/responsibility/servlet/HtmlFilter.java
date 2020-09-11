@@ -8,20 +8,12 @@ package com.gara.design.pattern.chain.responsibility.servlet;
  **/
 public class HtmlFilter implements Filter {
 
-    private final ChainFilter chain;
-
-    public HtmlFilter() {
-        this.chain = new DefaultChainFilter(this);
-    }
-
     @Override
-    public boolean doFilter(ServletRequest request, ServletResponse response, ChainFilter chainFilter) {
-        System.out.println("into HtmlFilter ++++++++++ ");
-        String requestStr = request.getStr();
-        boolean flag = true;
-        while (chainFilter != null && flag){
-            flag = chainFilter.doFilter(request, response);
-            chainFilter = chain;
+    public boolean doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) {
+        System.out.println("into HtmlFilter >>>>>>");
+        if (request.getStr().contains("hehe")){
+            String replace = request.getStr().replace("hehe", "haha");
+            request.setStr(replace);
         }
         return true;
     }
