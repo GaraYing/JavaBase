@@ -21,7 +21,7 @@ public class Consumer implements Runnable {
             try {
                 // 阻塞队列：队列满了会阻塞生产者，队列空了会阻塞消费者
                 MyTask myTask = blockedQueue.take();
-                System.out.println("Consumer : " + myTask.hashCode());
+                System.out.println("Consumer starts : " + myTask.hashCode());
                 myTask.run();
             } catch (InterruptedException e) {
                 e.printStackTrace();

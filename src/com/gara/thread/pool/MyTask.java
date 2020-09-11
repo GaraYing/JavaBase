@@ -9,6 +9,11 @@ package com.gara.thread.pool;
 public class MyTask implements Runnable {
     @Override
     public void run() {
-        System.out.println("Thread starts >>>>>" + this.hashCode());
+        try {
+            Thread.sleep(1000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Thread runs >>>>>" + this.hashCode());
     }
 }

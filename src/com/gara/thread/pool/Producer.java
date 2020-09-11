@@ -19,6 +19,7 @@ public class Producer implements Runnable {
         for (int i = 0; i < 10; i++) {
             System.out.println("produce : " + i);
             try {
+                //  如果队列满，则阻塞
                 this.blockedQueue.put(new MyTask());
             } catch (InterruptedException e) {
                 e.printStackTrace();

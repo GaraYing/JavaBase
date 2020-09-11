@@ -24,13 +24,13 @@ public class ThreadPoolMain {
         System.out.println("=========================================");
         MyBlockedQueue<MyTask> blockingQueue = new MyBlockedQueue<>();
         // 生产者生产任务
-        Thread producer = new Thread(new Producer(blockingQueue));
+        Thread producer = new Thread(new Producer(blockingQueue), "producer");
         producer.start();
 
         Thread.sleep(1000);
 
         // 消费者消费任务
-        Thread consumer  = new Thread(new Consumer(blockingQueue));
+        Thread consumer  = new Thread(new Consumer(blockingQueue),"consumer");
         consumer.start();
     }
 }
