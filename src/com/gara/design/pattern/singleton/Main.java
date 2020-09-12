@@ -1,9 +1,18 @@
 package com.gara.design.pattern.singleton;
 
+import javax.crypto.KeyGenerator;
 import java.io.*;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * @description: 枚举单例模式测试
+ *
+ * @see DateFormat#getInstance() 
+ * @see DateFormat#getDateInstance(int)
+ * @see DateFormat#getDateInstance(int, Locale)
+ * @see KeyGenerator#getInstance(String)
  * @author: GaraYing
  * @createTime: 2020/8/27 15:03
  * @Version: 1.0

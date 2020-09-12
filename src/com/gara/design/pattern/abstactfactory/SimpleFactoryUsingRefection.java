@@ -13,12 +13,19 @@ import com.gara.design.pattern.abstactfactory.monkey.Bicycle;
  **/
 public class SimpleFactoryUsingRefection {
 
+    // type configurable
     public static final String type = "human";
 
-    public static Food createFood() throws Exception {
-
-        Food food = null;
-        return food;
+    public static Food createFood() {
+        // reflection
+        switch (type){
+            case "human":
+                return new Rice();
+            case "monkey":
+                return new Banana();
+            default:
+                return null;
+        }
     }
 
     public static void main(String[] args) {
@@ -26,5 +33,8 @@ public class SimpleFactoryUsingRefection {
         String bananaName = Banana.class.getName();
         System.out.println(simpleName);
         System.out.println(bananaName);
+        Food food = SimpleFactoryUsingRefection.createFood();
+        assert food != null;
+        food.taste();
     }
 }
