@@ -8,5 +8,5 @@ package com.gara.design.pattern.adapter.objectadapter;
 **/
 public interface ChargeAdaptee {
 
-    void chargeMobile();
+    void chargeMobile(String type);
 }
