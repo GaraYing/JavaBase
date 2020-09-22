@@ -18,6 +18,6 @@ public class Main {
         new ChargeAdapter(new AndroidAdaptee(), new IosAdaptee()).chargeAll();
         System.out.println("===============================================");
         // 类适配器
-        new ChildAdapter(new Target()).request();
+        new Target(new ChildAdapter()).request();
     }
 }
