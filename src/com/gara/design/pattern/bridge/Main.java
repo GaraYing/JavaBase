@@ -1,6 +1,5 @@
 package com.gara.design.pattern.bridge;
 
-import com.gara.design.pattern.bridge.*;
 import com.gara.design.pattern.bridge.service.impl.Avi;
 import com.gara.design.pattern.bridge.service.impl.Linux;
 import com.gara.design.pattern.bridge.service.impl.Mp4;

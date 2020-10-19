@@ -42,6 +42,5 @@ public class StreamDemo {
         while (stringTokenizer.hasMoreTokens()){
             System.out.println(stringTokenizer.nextToken(","));
         }
-
     }
 }

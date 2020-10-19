@@ -9,14 +9,14 @@ package com.gara.design.pattern.abstactfactory;
 public abstract class AbstractFactory {
 
     /**
-     * 喜欢的事物
-     * @return
+     * 喜欢的食物
+     * @return 食物
      */
     protected abstract Food createFood();
 
     /**
      * 乘坐的交通工具
-     * @return
+     * @return 交通工具
      */
     protected abstract Vehicle createVehicle();
 }
