@@ -11,7 +11,7 @@ import java.lang.reflect.Constructor;
 **/
 public class HungryManSingleton {
 
-    public static final HungryManSingleton instance = new HungryManSingleton();
+    private static final HungryManSingleton instance = new HungryManSingleton();
 
     private HungryManSingleton(){}
 

@@ -12,7 +12,7 @@ import java.lang.reflect.Constructor;
  **/
 public class LazyManSingleton {
 
-    public static LazyManSingleton instance = null;
+    private static LazyManSingleton instance = null;
 
     private LazyManSingleton() {
     }

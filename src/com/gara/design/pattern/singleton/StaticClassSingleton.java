@@ -16,7 +16,7 @@ public class StaticClassSingleton {
         public static final StaticClassSingleton INSTANCE = new StaticClassSingleton();
     }
 
-    public static StaticClassSingleton getInstance(){
+    private static StaticClassSingleton getInstance(){
         return SingletonHolder.INSTANCE;
     }
 
