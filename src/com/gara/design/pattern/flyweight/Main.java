@@ -1,5 +1,16 @@
 package com.gara.design.pattern.flyweight;
 
+/**
+ * usage in JDK
+ *
+ * @see Integer#valueOf(int)
+ * @see Boolean#valueOf(String)
+ * @see Byte#valueOf(byte)
+ * @see Character#valueOf(char)
+ * @see Short#valueOf(String)
+ * @see Long#valueOf(String)
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {
