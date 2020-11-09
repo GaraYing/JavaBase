@@ -1,4 +1,4 @@
-package com.gara.design.pattern.staticproxy.three;
+package com.gara.design.pattern.proxy.staticproxy.three;
 
 /**
  * @Author GARA
@@ -6,11 +6,11 @@ package com.gara.design.pattern.staticproxy.three;
  * @Date 2020/11/8 16:36
  * @Version V1.0.0
  **/
-public class GameSuperPlayerProxy implements IGamePlayer {
+public class GamePlayerProxy implements IGamePlayer {
 
     private IGamePlayer gamePlayer;
 
-    public GameSuperPlayerProxy(IGamePlayer gamePlayer) {
+    public GamePlayerProxy(IGamePlayer gamePlayer) {
         this.gamePlayer = gamePlayer;
     }
 

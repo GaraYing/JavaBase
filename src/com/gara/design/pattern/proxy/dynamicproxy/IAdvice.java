@@ -1,4 +1,4 @@
-package com.gara.design.pattern.dynamicproxy;
+package com.gara.design.pattern.proxy.dynamicproxy;
 
 /**
  * @Author GARA

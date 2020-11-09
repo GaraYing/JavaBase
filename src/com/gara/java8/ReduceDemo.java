@@ -16,6 +16,7 @@ public class ReduceDemo {
                 .reduce(0, (acc, element) -> acc + element);
         Integer reduce = Stream.of(1, 2, 3)
                 .reduce(0, Integer::sum);
+        System.out.println(count);
         System.out.println(Objects.equals(count, reduce));
     }
 }

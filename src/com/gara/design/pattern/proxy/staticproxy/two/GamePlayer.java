@@ -1,6 +1,4 @@
-package com.gara.design.pattern.staticproxy.two;
-
-import java.util.Calendar;
+package com.gara.design.pattern.proxy.staticproxy.two;
 
 /**
  * @Author GARA 具体玩家实现

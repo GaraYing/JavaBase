@@ -1,8 +1,4 @@
-package com.gara.design.pattern.staticproxy.one;
-
-import com.gara.design.pattern.staticproxy.one.ProxySubject;
-import com.gara.design.pattern.staticproxy.one.RealSubject;
-import com.gara.design.pattern.staticproxy.one.Subject;
+package com.gara.design.pattern.proxy.staticproxy.one;
 
 /**
  * @Author GARA

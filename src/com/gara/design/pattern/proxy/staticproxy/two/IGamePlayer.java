@@ -1,4 +1,4 @@
-package com.gara.design.pattern.staticproxy.two;
+package com.gara.design.pattern.proxy.staticproxy.two;
 
 /**
  * @Author GARA
