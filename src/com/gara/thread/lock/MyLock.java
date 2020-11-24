@@ -9,6 +9,7 @@ import java.util.concurrent.locks.LockSupport;
 
 /**
  * @Author GARA
+ * @note CompareAndSwap 底层指令： lock cmpxchg指令
  * @Description 自定义锁
  * @Date 2019/12/28 16:41
  * @Version V1.0.0
