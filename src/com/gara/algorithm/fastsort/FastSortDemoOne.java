@@ -1,2 +1,4 @@
-package com.gara.algorithm.fastsort;public class FastSortDemoOne {
+package com.gara.algorithm.fastsort;
+
+public class FastSortDemoOne {
 }

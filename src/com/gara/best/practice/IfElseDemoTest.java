@@ -54,6 +54,8 @@ public class IfElseDemoTest {
             case "subtract":
                 result = a - b;
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + operator);
         }
         return result;
     }

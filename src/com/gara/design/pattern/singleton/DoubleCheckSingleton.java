@@ -12,7 +12,7 @@ public class DoubleCheckSingleton {
     private static DoubleCheckSingleton INSTANCE;
     // 防止指令重排序/可见性，底层lock指令实现
     // volatile 修饰一块内存/一个变量
-    // public static volatile DoubleCheckSingleton INSTANCE;
+//     public static volatile DoubleCheckSingleton INSTANCE;
     private DoubleCheckSingleton() {
     }
 

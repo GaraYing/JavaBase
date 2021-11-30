@@ -5,7 +5,11 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author GARA
  * @version V1.0.0
- * @description volatile 关键字
+ * @description volatile 关键字 解决共享变量可见性问题
+ *  由于cpu和内存的计算速度相差巨大，引入缓存，即三级缓存
+*   CPU(Register寄存器) -> L1 -> L2 -> L3
+ *  缓存一致性协议：硬件级别的协议
+ *
  * @date 2020/11/28 15:05
  **/
 public class VolatileDemo {
@@ -23,6 +27,7 @@ public class VolatileDemo {
             }*/
         }
         System.out.println("m end");
+
     }
 
     public static void main(String[] args) {
