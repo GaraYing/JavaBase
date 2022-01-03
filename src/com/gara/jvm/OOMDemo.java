@@ -7,6 +7,7 @@ import java.util.Random;
 /**
  * @author GARA
  * @description OutOfMemoryError -Xms500m -Xmx500m
+ * -XX: NewRatio :设置新生代与老年代比例，默认值：2
  * @date 2022/1/3 18:28
  */
 public class OOMDemo {
